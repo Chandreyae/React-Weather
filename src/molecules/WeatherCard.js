@@ -67,7 +67,7 @@ const WeatherCard = ({ locationDetails }) => {
       }
     };
     fetchData();
-  }, [unit, userInputLocation]);
+  }, [unit, userInputLocation]); // eslint-disable-line
 
   const getTitle = () => {
     return weatherForecast.timezone;
@@ -113,7 +113,10 @@ const WeatherCard = ({ locationDetails }) => {
                   weatherForecast.daily.map((day, index) => {
                     return (
                       <Grid item key={`${index}${index * 2}`}>
-                        <DayBasedWeatherSnippet weatherForecast={day} />
+                        <DayBasedWeatherSnippet
+                          weatherForecast={day}
+                          index={index}
+                        />
                       </Grid>
                     );
                   })}

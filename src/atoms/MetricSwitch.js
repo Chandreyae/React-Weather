@@ -9,10 +9,10 @@ const MetricSwitch = withStyles((theme) => ({
   },
   switchBase: {
     padding: 2,
-    color: theme.palette.grey[500],
+    color: theme.palette.secondary,
     "&$checked": {
       transform: "translateX(12px)",
-      color: theme.palette.common.white,
+      color: theme.palette.common.black,
       "& + $track": {
         opacity: 1,
         backgroundColor: theme.palette.primary.main,

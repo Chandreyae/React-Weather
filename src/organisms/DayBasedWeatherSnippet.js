@@ -1,12 +1,14 @@
 import { Grid, Typography } from "@material-ui/core";
 import React from "react";
 import { getDay } from "../utils/WeatherWidgetUtils";
-const DayBasedWeatherSnippet = ({ weatherForecast }) => {
+const DayBasedWeatherSnippet = ({ weatherForecast, index }) => {
   return (
     <div style={{ padding: "8px" }}>
       <Grid container direction="column" alignContent="center">
         <Grid item>
-          <Typography>{getDay(weatherForecast.dt)}</Typography>
+          <Typography>
+            {index === 0 ? "Today" : getDay(weatherForecast.dt)}
+          </Typography>
         </Grid>
         <Grid item>
           <img
