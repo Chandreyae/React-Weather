@@ -9,13 +9,13 @@ const MetricSwitch = withStyles((theme) => ({
   },
   switchBase: {
     padding: 2,
-    color: theme.palette.secondary,
+    color: theme.palette.primary,
     "&$checked": {
       transform: "translateX(12px)",
       color: theme.palette.common.black,
       "& + $track": {
         opacity: 1,
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.info[400],
         borderColor: theme.palette.primary.main,
       },
     },
@@ -29,7 +29,7 @@ const MetricSwitch = withStyles((theme) => ({
     border: `1px solid ${theme.palette.grey[500]}`,
     borderRadius: 16 / 2,
     opacity: 1,
-    backgroundColor: theme.palette.common.white,
+    backgroundColor: "theme.palette.common.black",
   },
   checked: {},
 }))(Switch);

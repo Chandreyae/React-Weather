@@ -85,16 +85,16 @@ const WeatherCard = ({ locationDetails }) => {
   };
   const renderWeatherBody = () => (
     <>
-      {loading ? (
-        <Box width="100%" display="flex" justifyContent="center">
-          <CircularProgress />
-        </Box>
-      ) : (
+      {!loading ? (
         <CardHeader
           title={getTitle() || null}
           subheader={getSubheader() || null}
           action={<SearchBox id="searchbox" onClick={onClick} />}
         />
+      ) : (
+        <Box width="100%" display="flex" justifyContent="center">
+          <CircularProgress />
+        </Box>
       )}
       <CardContent>
         {loading || isEmpty(weatherForecast) ? (
@@ -130,7 +130,7 @@ const WeatherCard = ({ locationDetails }) => {
           <Grid item>
             <Grid container spacing={2} justifyContent="flex-start">
               <Grid item>
-                <Typography>Farhenhit</Typography>
+                <span>Farhenhit</span>
               </Grid>
               <Grid item>
                 <MetricSwitch
@@ -140,7 +140,7 @@ const WeatherCard = ({ locationDetails }) => {
                 />
               </Grid>
               <Grid item>
-                <Typography>Celsius</Typography>
+                <span>Celsius</span>
               </Grid>
             </Grid>
           </Grid>

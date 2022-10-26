@@ -21,7 +21,7 @@ const SearchBox = ({ onClick }) => {
       onChange={onChange}
       InputProps={{
         endAdornment: (
-          <InputAdornment onClick={handleClick} position="start">
+          <InputAdornment onClick={handleClick} position="end">
             <IconButton id="searchbtn">
               <SearchIcon />
             </IconButton>
